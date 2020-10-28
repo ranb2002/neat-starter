@@ -71,6 +71,49 @@ collections:
           - { label: Name, name: name, widget: string }
           - { label: Author, name: author, widget: string }
           - { label: URL, name: url, widget: string }
+  - label: "Images"           # Label for the collection in the editor UI
+    label_singular: "Image"   # Singular label for certain elements in the editor
+    description: "Here are some illustrations that I want to learn deeply or to reflect on. By having them on a webpage,
+                  instead of my private office, I can take a look at them everywhere and at any time. 👁️\n
+                  \n
+                  You can read my fully motivation on my post named Another picture on the wall. 🤘\n
+                  \n
+                  These pictures are not from me, I do not have any rights on them. I added the original source when I
+                  could find it. 🔎\n
+                  \n
+                  Until I write some articles about them, I suggest you read the source where they came from for more
+                  information.\n
+                  \n
+                  Enjoy! ✨"
+    name: "images"         # Unique identifier for the collection
+    folder: "src/images"
+    create: true
+    editor:
+      preview: true
+    extension: json                               # File extension searched for when finding existing entries in a folder collection
+    format: json                                  # How collection files are parsed and saved
+    fields:
+      - label: "Title"                            # Label for the field in the editor UI
+        name: "title"                             # Unique identifier for the field
+        widget: "string"                          # Defines editor UI and inputs and file field data types
+        required: true                            # Specify as false to make a field optional; defaults to true
+        hint: "Title of the image"            # Optionally add helper text directly below a widget
+        comment: "Waht is that?"                  # Optional comment to add before the field (only supported for yaml)
+      - label: "Image"
+        name: "image"
+        widget: "image"
+        required: true
+        hint: "Image"
+      - label: "Source name"
+        name: "sourceName"
+        widget: "string"
+        required: true
+        hint: "Page name of the source"
+      - label: "Source URL"
+        name: "sourceURL"
+        widget: "string"
+        required: true
+        hint: "URL of the source"
   - label: "Videogames"           # Label for the collection in the editor UI
     label_singular: "Videogame"   # Singular label for certain elements in the editor
     description: "Videogames that I have particularly appreciated"

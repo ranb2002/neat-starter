@@ -93,4 +93,3 @@ collections:
         required: true
         hint: "Image that represents the videogame"
       - {label: "Body", name: "body", widget: "markdown"}
-        comment: 'This is a multiline\ncomment'

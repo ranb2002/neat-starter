@@ -71,3 +71,16 @@ collections:
           - { label: Name, name: name, widget: string }
           - { label: Author, name: author, widget: string }
           - { label: URL, name: url, widget: string }
+
+  - label: "Videogames"           # Label for the collection in the editor UI
+    label_singular: "Videogame"   # Singular label for certain elements in the editor
+    description: "Videogames that I have particularly appreciated"
+    name: "videogame"         # Unique identifier for the collection
+    folder: "src/videogames"
+    create: true
+    editor:
+      preview: true
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
